@@ -9,7 +9,7 @@ import EditProfilePopup from "./EditProfilePopup";
 import PopupWithForm from "./PopupWithForm";
 import ProtectedRoute from "./ProtectedRoute";
 import { CurrentUserContext } from "../context/CurrentUserContext";
-import { api } from "../utils/Api";
+import { Api, api } from "../utils/Api";
 import { auth } from "../utils/Auth.js";
 import Register from "./Register";
 import Login from "./Login";
@@ -28,6 +28,14 @@ function App() {
   const [infoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
+
+  const api = new Api({
+    baseUrl: "https://api.yliuko.nomoredomains.xyz",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+      "Content-Type": "application/json",
+    },
+  });
 
   useEffect(() => {
     const token = localStorage.getItem("token");
