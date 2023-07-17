@@ -45,6 +45,6 @@ class Api {
   }
 }
 const apiConfig = {
-  baseUrl: "https://auth.nomoreparties.co/",
+  baseUrl: "https://api.yliuko.nomoredomains.xyz/",
 };
 export const auth = new Api(apiConfig);
