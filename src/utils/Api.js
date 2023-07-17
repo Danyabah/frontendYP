@@ -86,7 +86,7 @@ class Api {
 export const api = new Api({
   baseUrl: "https://api.yliuko.nomoredomains.xyz",
   headers: {
-    Authorization: "a4b5dd91-5d4d-460d-8550-bc8703b39a26",
+    Authorization: "Bearer a4b5dd91-5d4d-460d-8550-bc8703b39a26",
     "Content-Type": "application/json",
   },
 });
