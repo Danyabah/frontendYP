@@ -8,7 +8,7 @@ class Api {
     if (response.ok) {
       return response.json();
     }
-    return Promise.reject(`Произошла ошибка: ${response.status}`);
+    return Promise.reject(`Произошла ошибка : ${response.status}`);
   }
 
   _request(url, options) {
